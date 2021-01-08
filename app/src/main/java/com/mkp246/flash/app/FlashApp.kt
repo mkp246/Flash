@@ -27,6 +27,7 @@ class FlashApp : Application() {
             cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
         }
         val cameraIdList: Array<String> = cameraManager?.cameraIdList!!
+        state.cameraCount = cameraIdList.size
         state.backId = cameraIdList[0]
         state.frontId = cameraIdList[1]
     }
